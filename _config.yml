@@ -3,3 +3,14 @@ email: romain.marc29@gmail.com
 description: "Networks & Telecoms Student"
 url: "https://rmarc29.github.io"
 github_username: rmarc29
+
+portfolio:
+  - title: "World of Warcraft Addons"
+    img: "img/portfolio/app.png"
+    desc: "Addons for the vanilla version of World of Warcraft"
+    url: "https://github.com/rmarc29/lists/wow-vanilla-addons"
+  - title: "EZcape"
+    img: "img/portfolio/design.png"
+    desc: "Tracker App for the game Escape from Tarkov"
+    url: "https://github.com/rmarc29/EZcape"
+
