@@ -155,7 +155,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/fond.png');
     text-align: center;
     color: white;
     .header-content {
@@ -252,7 +252,7 @@ header {
             .project-category {
                 text-transform: uppercase;
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 35px;
             }
             .project-name {
                 font-size: 18px;
@@ -268,10 +268,10 @@ header {
         .portfolio-box-caption {
             .portfolio-box-caption-content {
                 .project-category {
-                    font-size: 16px;
+                    font-size: 25px;
                 }
                 .project-name {
-                    font-size: 22px;
+                    font-size: 16px;
                 }
             }
         }
@@ -347,5 +347,55 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
+}
+
+// Custom Classes
+
+.text-strong {
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #00e5ff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+.highlight2 {
+  font-weight: 700;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.7), 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.highlight3 {
+  font-weight: 700;
+  color: #D4AF37;
+  text-shadow:
+    0 0 5px rgba(212, 175, 55, 0.6),
+    0 0 12px rgba(212, 175, 55, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.brand-bg {
+  // Set the background color you want.
+  // Using a dark teal as an example.
+  background-color: #000000;
+
+  // Add some padding so the background isn't too tight around the text.
+  padding-left: 20px;
+  padding-right: 20px;
+  
+  // You might need to adjust the text color to make it readable.
+  // The !important flag ensures this color is used, overriding other styles.
+  color: white !important;
+
+  // Optional: Add a subtle transition for the hover effect.
+  transition: background-color 0.3s ease;
+
+  // Define a style for when the mouse hovers over the element.
+  &:hover {
+    background-color: #232527; // A slightly lighter color on hover.
+  }
 }
 
