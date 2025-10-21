@@ -222,61 +222,85 @@ header {
     }
 }
 
-.portfolio-box {
-    position: relative;
-    display: block;
-    max-width: 650px;
-    margin: 0 auto;
-    .portfolio-box-caption {
-        color: white;
-        opacity: 0;
+.portfolio-box-wrapper {
+    position: relative; // conteneur pour le glow
+    display: inline-block; // ou block selon ton besoin
+    overflow: visible;
+
+    .portfolio-box {
+        position: relative;
         display: block;
-        background: rgba( $theme-primary, .9 );
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        @include transition-all;
-        .portfolio-box-caption-content {
+        max-width: 650px;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden; // l'image ne dépasse pas
+        background-color: #000;
+        border: 1px solid rgba(0, 200, 255, 0.4);
+
+        .portfolio-box-image {
+            display: block;
             width: 100%;
-            text-align: center;
+            height: auto;
+        }
+
+        .portfolio-box-caption {
+            color: #fff;
+            opacity: 0;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            .project-category,
-            .project-name {
-                @include sans-serif-font;
-                padding: 0 15px;
-            }
-            .project-category {
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 35px;
-            }
-            .project-name {
-                font-size: 18px;
+            inset: 0;
+            background: rgba($theme-primary, 0.9);
+            text-align: center;
+            z-index: 1;
+            @include transition-all;
+
+            .portfolio-box-caption-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                text-align: center;
+
+                .project-category,
+                .project-name {
+                    @include sans-serif-font;
+                    padding: 0 15px;
+                }
+
+                .project-category {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 35px;
+                }
+
+                .project-name {
+                    font-size: 18px;
+                }
             }
         }
-    }
-    &:hover {
-        .portfolio-box-caption {
+
+        &:hover .portfolio-box-caption {
             opacity: 1;
         }
     }
-    @media (min-width: 768px) {
-        .portfolio-box-caption {
-            .portfolio-box-caption-content {
-                .project-category {
-                    font-size: 25px;
-                }
-                .project-name {
-                    font-size: 16px;
-                }
-            }
-        }
+
+    // Glow séparé du box pour dépasser l'overflow
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 0 rgba(0, 161, 206, 0); // départ
+        transition: box-shadow 0.3s ease;
+        pointer-events: none;
+    }
+
+    &:hover::before {
+        box-shadow: 0 0 60px 10px rgba(0, 161, 206, 0.8); // glow visible
     }
 }
+
+
 
 .call-to-action {
     h2 {
@@ -359,7 +383,7 @@ body {
 .highlight {
   font-weight: 700;
   color: #00e5ff;
-  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.4);
 }
 
 .highlight2 {
