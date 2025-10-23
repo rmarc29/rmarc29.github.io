@@ -14,3 +14,7 @@ portfolio:
     desc: "Tracker App for the game Escape from Tarkov"
     url: "https://github.com/rmarc29/EZcape"
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .hero-img {
+        max-height: 500px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #project-content h3,
+      #project-content p {
+        color: #fff;
+      }
+
+      /* Container for pulsing glow around images */
+      .glow-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .glow-container img {
+        display: block;
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1; /* image on top */
+      }
+
+      .glow-container::before {
+        content: "";
+        position: absolute;
+        top: -8px; left: -8px; right: -8px; bottom: -8px;
+        border-radius: 8px;
+        z-index: 0;
+        pointer-events: none;
+        box-shadow: 0 0 20px 4px rgba(0, 25, 61, 0.7);
+        animation: pulseGlow 2s ease-in-out infinite;
+      }
+
+      /* Pulsing glow keyframes */
+      @keyframes pulseGlow {
+        0% { box-shadow: 0 0 10px 2px rgba(0, 13, 124, 0.5); }
+        50% { box-shadow: 0 0 25px 6px rgba(2, 113, 218, 0.9); }
+        100% { box-shadow: 0 0 10px 2px rgba(0, 13, 124, 0.5); }
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    {% include nav.html %}
+
+    <!-- Hero Image -->
+    <section class="text-center" style="padding-top: 100px; margin: 0;">
+      <img src="{{ page.image | relative_url }}" class="img-fluid hero-img" alt="{{ page.title }}">
+    </section>
+
+    <!-- Title and Category -->
+    <section class="text-center" style="padding: 5px 0; margin: 0;">
+      <h1 style="margin: 5px 0 5px 0;">{{ page.title }}</h1>
+      {% if page.category %}
+        <p style="margin: 0; font-size: 5rem; color: #bebebe;">{{ page.category }}</p>
+      {% endif %}
+    </section>
+
+    <!-- Project Sections -->
+    <section id="project-content">
+      <div class="container">
+        {% if page.sections %}
+          {% for section in page.sections %}
+            {% assign modIndex = forloop.index0 | modulo: 2 %}
+            <div class="row project-section align-items-center mb-5">
+              {% if modIndex == 0 %}
+                <div class="col-md-6 d-flex justify-content-center">
+                  <div class="glow-container">
+                    <img src="{{ section.image | relative_url }}" alt="{{ section.title }}">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h3>{{ section.title }}</h3>
+                  <p>{{ section.text }}</p>
+                </div>
+              {% else %}
+                <div class="col-md-6">
+                  <h3>{{ section.title }}</h3>
+                  <p>{{ section.text }}</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <div class="glow-container">
+                    <img src="{{ section.image | relative_url }}" alt="{{ section.title }}">
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+    </section>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
