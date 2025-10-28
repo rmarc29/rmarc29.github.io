@@ -3,56 +3,95 @@
   <head>
     {% include head.html %}
     <style>
-      body {
-        background-color: #000;
-        color: #fff;
-      }
+  body {
+    background-color: #000;
+    color: #fff;
+  }
 
-      .hero-img {
-        max-height: 500px;
-        width: auto;
-        display: block;
-        margin: 0 auto;
-      }
+  .hero-img {
+    max-height: 500px; /* larger hero image */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
 
-      #project-content h3,
-      #project-content p {
-        color: #fff;
-      }
+  #project-content h3,
+  #project-content p {
+    color: #fff;
+  }
 
-      /* Container for pulsing glow around images */
-      .glow-container {
-        position: relative;
-        display: inline-block;
-      }
+  /* Container for pulsing glow around images */
+  .glow-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+    padding: 12px; /* gives the glow space to show */
+  }
 
-      .glow-container img {
-        display: block;
-        border-radius: 8px;
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        z-index: 1; /* image on top */
-      }
+  .glow-container img {
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px; /* larger images */
+    height: auto;
+    position: relative;
+    z-index: 2; /* ensures image stays above glow */
+  }
 
-      .glow-container::before {
-        content: "";
-        position: absolute;
-        top: -8px; left: -8px; right: -8px; bottom: -8px;
-        border-radius: 8px;
-        z-index: 0;
-        pointer-events: none;
-        box-shadow: 0 0 20px 4px rgba(0, 25, 61, 0.7);
-        animation: pulseGlow 2s ease-in-out infinite;
-      }
+  .glow-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 0 25px 8px rgba(0, 70, 200, 0.7);
+    animation: pulseGlow 5s ease-in-out infinite;
+  }
 
-      /* Pulsing glow keyframes */
-      @keyframes pulseGlow {
-        0% { box-shadow: 0 0 10px 2px rgba(0, 13, 124, 0.5); }
-        50% { box-shadow: 0 0 25px 6px rgba(2, 113, 218, 0.9); }
-        100% { box-shadow: 0 0 10px 2px rgba(0, 13, 124, 0.5); }
-      }
-    </style>
+  /* Pulsing glow keyframes */
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 15px 5px rgba(45, 2, 116, 0.514);
+    }
+    50% {
+      box-shadow: 0 0 40px 15px rgba(121, 2, 218, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 15px 5px rgba(48, 0, 124, 0.5);
+    }
+  }
+
+  /* Responsive image grid inside sections */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* wider */
+    gap: 40px; /* more spacing */
+    justify-items: center;
+  }
+
+  .project-section {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .project-section {
+      text-align: center;
+    }
+    .image-grid {
+      grid-template-columns: 1fr; /* one big image per row on mobile */
+      gap: 20px;
+    }
+  }
+</style>
+
   </head>
 
   <body id="page-top">
@@ -60,49 +99,88 @@
 
     <!-- Hero Image -->
     <section class="text-center" style="padding-top: 100px; margin: 0;">
-      <img src="{{ page.image | relative_url }}" class="img-fluid hero-img" alt="{{ page.title }}">
+      <img
+        src="{{ page.image | relative_url }}"
+        class="img-fluid hero-img"
+        alt="{{ page.title }}"
+      />
     </section>
 
     <!-- Title and Category -->
     <section class="text-center" style="padding: 5px 0; margin: 0;">
       <h1 style="margin: 5px 0 5px 0;">{{ page.title }}</h1>
       {% if page.category %}
-        <p style="margin: 0; font-size: 5rem; color: #bebebe;">{{ page.category }}</p>
+      <p style="margin: 0; font-size: 1.5rem; color: #bebebe;">
+        {{ page.category }}
+      </p>
       {% endif %}
+    </section>
+
+    <!-- Extra Images (dynamic, only if defined in front matter) -->
+    {% assign image_keys = "image1,image2,image3,image4,image5" | split: "," %}
+    <section id="extra-images" class="text-center mt-5">
+      {% for key in image_keys %}
+      {% assign img = page[key] %}
+      {% if img %}
+      <div class="glow-container m-3 d-inline-block">
+        <img src="{{ img | relative_url }}" alt="{{ page.title }} {{ key }}" />
+      </div>
+      {% endif %}
+      {% endfor %}
     </section>
 
     <!-- Project Sections -->
     <section id="project-content">
       <div class="container">
         {% if page.sections %}
-          {% for section in page.sections %}
-            {% assign modIndex = forloop.index0 | modulo: 2 %}
-            <div class="row project-section align-items-center mb-5">
-              {% if modIndex == 0 %}
-                <div class="col-md-6 d-flex justify-content-center">
-                  <div class="glow-container">
-                    <img src="{{ section.image | relative_url }}" alt="{{ section.title }}">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h3>{{ section.title }}</h3>
-                  <p>{{ section.text }}</p>
-                </div>
-              {% else %}
-                <div class="col-md-6">
-                  <h3>{{ section.title }}</h3>
-                  <p>{{ section.text }}</p>
-                </div>
-                <div class="col-md-6 d-flex justify-content-center">
-                  <div class="glow-container">
-                    <img src="{{ section.image | relative_url }}" alt="{{ section.title }}">
-                  </div>
-                </div>
-              {% endif %}
+        {% for section in page.sections %}
+        {% assign modIndex = forloop.index0 | modulo: 2 %}
+        <div class="row project-section align-items-center">
+          {% if modIndex == 0 %}
+          <!-- Images Left -->
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="image-grid">
+              {% assign image_keys =
+              "image,image1,image2,image3,image4,image5" | split: "," %} {% for
+              key in image_keys %} {% assign img = section[key] %} {% if img %}
+              <div class="glow-container">
+                <img
+                  src="{{ img | relative_url }}"
+                  alt="{{ section.title }} {{ key }}"
+                />
+              </div>
+              {% endif %} {% endfor %}
             </div>
-          {% endfor %}
+          </div>
+          <div class="col-md-6">
+            <h3>{{ section.title }}</h3>
+            <p>{{ section.text | markdownify }}</p>
+          </div>
+          {% else %}
+          <!-- Images Right -->
+          <div class="col-md-6">
+            <h3>{{ section.title }}</h3>
+            <p>{{ section.text | markdownify }}</p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="image-grid">
+              {% assign image_keys =
+              "image,image1,image2,image3,image4,image5" | split: "," %} {% for
+              key in image_keys %} {% assign img = section[key] %} {% if img %}
+              <div class="glow-container">
+                <img
+                  src="{{ img | relative_url }}"
+                  alt="{{ section.title }} {{ key }}"
+                />
+              </div>
+              {% endif %} {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
         {% else %}
-          {{ content }}
+        {{ content }}
         {% endif %}
       </div>
     </section>
