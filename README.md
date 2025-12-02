@@ -7,6 +7,7 @@ This is my presantation portfolio, it includes several categories such as :
 - Personnal Work
 - Experience Feedback
 - University Work
+---
 
 
-## Template used was created by [Start Bootstrap](http://startbootstrap.com)
+#### Template used was created by [Start Bootstrap](http://startbootstrap.com)
