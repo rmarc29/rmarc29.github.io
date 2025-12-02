@@ -1,0 +1,11 @@
+ezcape:
+  title: "EZcape"
+  category: "Un outil C# pour le jeu Escape From Tarkov"
+  sections:
+    - title: "Aperçu"
+      text: "EZcape est un outil C# qui aide les joueurs d'Escape from Tarkov à suivre leurs quêtes..."
+      image: "/img/portfolio/EZcape_screen_smol.png"
+    - title: "Versionnage"
+      text: "J'ai appris le versionnage et comment inviter l'utilisateur à mettre à jour son application..."
+      image1: "/img/portfolio/tarkov_versioning.png"
+      image2: "/img/portfolio/gist_versioning.png"
