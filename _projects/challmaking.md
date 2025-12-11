@@ -9,7 +9,7 @@ sections:
       The senior students from the Networks & Telecoms departement of the university of Marie & Louis Pasteur are organising each year a Capture the Flag event called SecuRT.  
     image: "/img/portfolio/securt_resize.png"
     
-  - title: "Versioning"
+  - title: "Cryptanalysis"
     text: |
      I have learned, while creating this app, about versioning and how to prompt the user to update his app to the newest realease version.
 
