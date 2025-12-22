@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: en
 title: "EZcape"
 image: "/img/portfolio/Logo_C_sharp.png" # Hero image
 category: "A C# Tool for the game Escape From Tarkov"

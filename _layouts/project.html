@@ -52,6 +52,10 @@ p {
     z-index: 2; /* ensures image stays above glow */
   }
 
+  .glow-container.large img {
+    max-width: 1200px; /* extra large images */
+  }
+
   .glow-container::before {
     content: "";
     position: absolute;
@@ -156,7 +160,7 @@ p {
               {% assign image_keys =
               "image,image1,image2,image3,image4,image5" | split: "," %} {% for
               key in image_keys %} {% assign img = section[key] %} {% if img %}
-              <div class="glow-container">
+              <div class="glow-container {% if section.large_image == key %}large{% endif %}">
                 <img
                   src="{{ img | relative_url }}"
                   alt="{{ section.title }} {{ key }}"
@@ -180,7 +184,7 @@ p {
               {% assign image_keys =
               "image,image1,image2,image3,image4,image5" | split: "," %} {% for
               key in image_keys %} {% assign img = section[key] %} {% if img %}
-              <div class="glow-container">
+              <div class="glow-container {% if section.large_image == key %}large{% endif %}">
                 <img
                   src="{{ img | relative_url }}"
                   alt="{{ section.title }} {{ key }}"

@@ -1,0 +1,57 @@
+en:
+  brand: "Romain MARC - Networks & Telecoms student"
+  nav:
+    about: "About Me"
+    services: "Discover Me"
+    portfolio: "Portfolio"
+    contact: "Contact"
+  header:
+    welcome: "Welcome to my online portfolio !"
+    subtitle: "In here you will find all the details about me, my projects and my studies."
+    cta: "Discover Me !"
+  about:
+    title: "About me !"
+    description: "I study <span class='highlight'>Networks and Telecommunications</span> in France, Montbéliard, where I specialize in <span class='highlight2'>Cybersecurity</span>. I am currently on a <strong>work study program</strong> at the <span class='highlight3'>Palace of Versailles</span> in the IT department."
+    cta: "Get Started!"
+  services:
+    title: "Why Networks and Telecoms ?"
+    passion_title: "Passion for IT"
+    passion_text: "IT has always been in my life and will always be."
+    freedom_title: "Feeling of freedom"
+    freedom_text: "For me, using a computer is way more than just fun. It is a relief and a way to learn new stuff !"
+    cyber_title: "Cybersecurity Enthusiast"
+    cyber_text: "Since I started my studies, I constantly keep my cybersecurity skills up to date working on different hacking challenges."
+    networks_title: "Networks"
+    networks_text: "Last but not least, I feel amazed by how networks work and their complexity"
+  contact:
+    title: "Let's Get In Touch!"
+    subtitle: "If you want to reach out, make sure to contact me via these platforms!"
+
+fr:
+  brand: "Romain MARC - Étudiant Réseaux & Télécoms"
+  nav:
+    about: "À Propos"
+    services: "Découvrir"
+    portfolio: "Portfolio"
+    contact: "Contact"
+  header:
+    welcome: "Bienvenue sur mon portfolio en ligne !"
+    subtitle: "Ici vous trouverez tous les détails sur moi, mes projets et mes études."
+    cta: "Découvrez-moi !"
+  about:
+    title: "À propos de moi !"
+    description: "J'étudie les <span class='highlight'>Réseaux et Télécommunications</span> en France, à Montbéliard, où je me spécialise en <span class='highlight2'>Cybersécurité</span>. Je suis actuellement en <strong>alternance</strong> au <span class='highlight3'>Château de Versailles</span> dans le département informatique."
+    cta: "Commencer !"
+  services:
+    title: "Pourquoi Réseaux et Télécoms ?"
+    passion_title: "Passion pour l'informatique"
+    passion_text: "L'informatique a toujours été dans ma vie et le sera toujours."
+    freedom_title: "Sentiment de liberté"
+    freedom_text: "Pour moi, utiliser un ordinateur est bien plus qu'un simple amusement. C'est un soulagement et un moyen d'apprendre de nouvelles choses !"
+    cyber_title: "Passionné de cybersécurité"
+    cyber_text: "Depuis le début de mes études, je maintiens constamment mes compétences en cybersécurité à jour en travaillant sur différents défis de hacking."
+    networks_title: "Réseaux"
+    networks_text: "Enfin, je suis émerveillé par le fonctionnement des réseaux et leur complexité"
+  contact:
+    title: "Restons en contact !"
+    subtitle: "Si vous souhaitez me contacter, assurez-vous de me joindre via ces plateformes !"

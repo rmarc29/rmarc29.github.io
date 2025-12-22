@@ -1,5 +1,6 @@
 ---
 layout: project
+lang: en
 title: Industrial Tribunal Visit
 ---
 A day behind the scenes at an industrial tribunal.<br>

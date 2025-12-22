@@ -2,10 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">About me !</h2>
+                {% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+                <h2 class="section-heading">{{ t.about.title }}</h2>
                 <hr class="light">
-                <p class="text-strong">I study <span class="highlight">Networks and Telecommunications</span> in France, Montbéliard, where I specialize in <span class="highlight2">Cybersecurity</span>. I am currently on a <strong>work study program</strong> at the <span class="highlight3">Palace of Versailles</span> in the IT department.</p>
-                <a href="#" class="btn btn-default btn-xl">Get Started!</a>
+                <p class="text-strong">{{ t.about.description }}</p>
+                <a href="#services" class="btn btn-default btn-xl page-scroll">{{ t.about.cta }}</a>
             </div>
         </div>
     </div>

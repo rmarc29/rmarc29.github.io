@@ -5,7 +5,8 @@
   <meta name="description" content="Online Portfolio">
   <meta name="author" content="Romain MARC">
 
-  <title>{{ page.title | default: "Portfolio - Romain MARC" }}</title>
+  {% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+  <title>{% if page.title %}{{ page.title }}{% else %}Portfolio - {{ t.brand | split: ' - ' | first }}{% endif %}</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}" type="text/css">

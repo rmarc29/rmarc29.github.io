@@ -19,3 +19,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  projects_fr:
+    output: true
+    permalink: /fr/projects/:name/

@@ -8,24 +8,32 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <span class="navbar-brand">Romain MARC - Networks & Telecoms student</span>
+            {% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+            <span class="navbar-brand">{{ t.brand }}</span>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                {% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+                {% if page.lang == 'fr' %}
+                  {% assign home_url = '/fr/' %}
+                {% else %}
+                  {% assign home_url = '/' %}
+                {% endif %}
                 <li>
-                    <a class="page-scroll" href="{{ '/' | relative_url }}#about">About Me</a>
+                    <a class="page-scroll" href="{{ home_url | relative_url }}#about">{{ t.nav.about }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="{{ '/' | relative_url }}#services">Discover Me</a>
+                    <a class="page-scroll" href="{{ home_url | relative_url }}#services">{{ t.nav.services }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="{{ '/' | relative_url }}#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="{{ home_url | relative_url }}#portfolio">{{ t.nav.portfolio }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="{{ '/' | relative_url }}#contact">Contact</a>
+                    <a class="page-scroll" href="{{ home_url | relative_url }}#contact">{{ t.nav.contact }}</a>
                 </li>
+                {% include lang-switcher.html %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
