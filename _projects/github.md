@@ -1,6 +1,6 @@
 ---
 layout: project
 lang: en
-title: CTF - Capture The Flag
+title: GitHub Foundations 
 ---
 Participated in hacking competitions with diverse challenges.

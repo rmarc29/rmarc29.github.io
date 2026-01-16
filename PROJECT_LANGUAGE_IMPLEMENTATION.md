@@ -41,7 +41,7 @@ Successfully extended the language system to include all project pages.
 
 ### Basic Translations
 - `conseil_prud.md` - Industrial Tribunal
-- `flag.md` - CTF competitions
+- `github.md` - CTF competitions
 - `game_server.md` - AzerothCore WoW server
 - `metier_dijon.md` - Careers fair
 
