@@ -56,6 +56,44 @@ p {
     max-width: 1200px; /* extra large images */
   }
 
+  .glow-container video {
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .glow-container.large video {
+    max-width: 1200px;
+  }
+
+  .youtube-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding-bottom: 50.625%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .youtube-container.large {
+    max-width: 1200px;
+  }
+
+  .youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
   .glow-container::before {
     content: "";
     position: absolute;
@@ -133,7 +171,7 @@ p {
       {% endif %}
     </section>
 
-    <!-- Extra Images (dynamic, only if defined in front matter) -->
+    <!-- Extra Images and Videos (dynamic, only if defined in front matter) -->
     {% assign image_keys = "image1,image2,image3,image4,image5" | split: "," %}
     <section id="extra-images" class="text-center mt-5">
       {% for key in image_keys %}
@@ -144,6 +182,11 @@ p {
       </div>
       {% endif %}
       {% endfor %}
+      {% if page.youtube %}
+      <div class="youtube-container m-3 d-inline-block">
+        <iframe src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% endif %}
     </section>
 
     <!-- Project Sections -->
@@ -157,9 +200,8 @@ p {
           <!-- Images Left -->
           <div class="col-md-6 d-flex justify-content-center">
             <div class="image-grid">
-              {% assign image_keys =
-              "image,image1,image2,image3,image4,image5" | split: "," %} {% for
-              key in image_keys %} {% assign img = section[key] %} {% if img %}
+              {% assign image_keys = "image,image1,image2,image3,image4,image5" | split: "," %}
+              {% for key in image_keys %} {% assign img = section[key] %} {% if img %}
               <div class="glow-container {% if section.large_image == key %}large{% endif %}">
                 <img
                   src="{{ img | relative_url }}"
@@ -167,6 +209,11 @@ p {
                 />
               </div>
               {% endif %} {% endfor %}
+              {% if section.youtube %}
+              <div class="youtube-container {% if section.large_youtube %}large{% endif %}">
+                <iframe src="https://www.youtube.com/embed/{{ section.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              {% endif %}
             </div>
           </div>
           <div class="col-md-6">
@@ -181,9 +228,12 @@ p {
           </div>
           <div class="col-md-6 d-flex justify-content-center">
             <div class="image-grid">
-              {% assign image_keys =
-              "image,image1,image2,image3,image4,image5" | split: "," %} {% for
-              key in image_keys %} {% assign img = section[key] %} {% if img %}
+              {% assign image_keys = "image,image1,image2,image3,image4,image5" | split: "," %}
+              {% assign video_keys = "video,video1,video2,video3,video4,video5" | split: "," %}
+              {% for key in image_keys %} {% assign img = section[key] %} {% if img %}
+              <div class="glow-container {% if section.large_image == key %}large{% endif %}">
+                <img
+                 for key in image_keys %} {% assign img = section[key] %} {% if img %}
               <div class="glow-container {% if section.large_image == key %}large{% endif %}">
                 <img
                   src="{{ img | relative_url }}"
@@ -191,10 +241,11 @@ p {
                 />
               </div>
               {% endif %} {% endfor %}
-            </div>
-          </div>
-          {% endif %}
-        </div>
+              {% if section.youtube %}
+              <div class="youtube-container {% if section.large_youtube %}large{% endif %}">
+                <iframe src="https://www.youtube.com/embed/{{ section.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              {% endif
         {% endfor %}
         {% else %}
         {{ content }}
