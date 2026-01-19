@@ -229,11 +229,7 @@ p {
           <div class="col-md-6 d-flex justify-content-center">
             <div class="image-grid">
               {% assign image_keys = "image,image1,image2,image3,image4,image5" | split: "," %}
-              {% assign video_keys = "video,video1,video2,video3,video4,video5" | split: "," %}
               {% for key in image_keys %} {% assign img = section[key] %} {% if img %}
-              <div class="glow-container {% if section.large_image == key %}large{% endif %}">
-                <img
-                 for key in image_keys %} {% assign img = section[key] %} {% if img %}
               <div class="glow-container {% if section.large_image == key %}large{% endif %}">
                 <img
                   src="{{ img | relative_url }}"
@@ -245,7 +241,11 @@ p {
               <div class="youtube-container {% if section.large_youtube %}large{% endif %}">
                 <iframe src="https://www.youtube.com/embed/{{ section.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              {% endif
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
         {% endfor %}
         {% else %}
         {{ content }}
