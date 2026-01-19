@@ -4,7 +4,7 @@ lang: en
 title: "Private Game Server"
 image: "/img/portfolio/HSQL-Acore.png" # Hero image
 category: "An entire private server structure for the game World of Warcraft (running on AzerothCore)"
-youtube: "YOUR_VIDEO_ID_HERE" # Replace with YouTube video ID
+youtube: "3-5Nw5YSHaI" # Replace with YouTube video ID
 sections:
   - title: "Overview"
     text: |
@@ -79,7 +79,7 @@ sections:
   - title: "Video Demonstration"
     text: |
       Here is a video demonstration of the server in action, showcasing the register and login process. The database interactions are also highlighted to illustrate how user data is <font color="lightblue">securely</font> managed when a registration occurs.
-    video: "/mov/contenu.mp4"
+    youtube: "3-5Nw5YSHaI"
     
   - title: "French Networks & Telecoms National Program"
     text: |

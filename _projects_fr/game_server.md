@@ -3,7 +3,9 @@ layout: project
 lang: fr
 title: "Serveur de Jeu Privé"
 image: "/img/portfolio/HSQL-Acore.png" # Hero image
-category: "Une structure complète de serveur privé pour le jeu World of Warcraft (fonctionnant sur AzerothCore)"youtube: "YOUR_VIDEO_ID_HERE" # Remplacer par l'ID de la vidéo YouTubesections:
+category: "Une structure complète de serveur privé pour le jeu World of Warcraft (fonctionnant sur AzerothCore)"
+youtube: "3-5Nw5YSHaI" # Remplacer par l'ID de la vidéo YouTube
+sections:
   - title: "Aperçu"
     text: |
       > ⚠️ AVERTISSEMENT : <font color="yellow">RTRealm</font> est un projet privé créé uniquement à des fins d'apprentissage. Ce projet n'est pas affilié, approuvé ou connecté à <font color="blue">Blizzard Entertainment</font> de quelque manière que ce soit. World of Warcraft, WoW et tout le contenu connexe sont des marques commerciales et des propriétés de <font color="blue">Blizzard Entertainment Inc</font>. Ce serveur est maintenu uniquement à des fins éducatives et non commerciales dans un environnement académique.
@@ -75,7 +77,7 @@ category: "Une structure complète de serveur privé pour le jeu World of Warcra
   - title: "Démonstration Vidéo"
     text: |
       Voici une démonstration vidéo du serveur en action, présentant le processus d'inscription et de connexion. Les interactions avec la base de données sont également mises en évidence pour illustrer comment les données utilisateur sont gérées de manière <font color="lightblue">sécurisée</font> lors d'une inscription.
-    video: "/mov/contenu.mp4"
+    youtube: "3-5Nw5YSHaI"
     
   - title: "Programme National Réseaux & Télécoms"
     text: |
