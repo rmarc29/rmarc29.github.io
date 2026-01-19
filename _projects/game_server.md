@@ -4,7 +4,6 @@ lang: en
 title: "Private Game Server"
 image: "/img/portfolio/HSQL-Acore.png" # Hero image
 category: "An entire private server structure for the game World of Warcraft (running on AzerothCore)"
-youtube: "3-5Nw5YSHaI"
 sections:
   - title: "Overview"
     text: |
