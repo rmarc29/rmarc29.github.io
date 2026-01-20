@@ -7,11 +7,13 @@ category: "A career fair event in Dijon, France, organized by the city"
 sections:
   - title: "Overview"
     text: | 
-      In March 2025, I had the opportunity to attend the Explore Careers Fair in Dijon, France. This event was organized by the city of Dijon to connect students and job seekers with local businesses and organizations.
+      On March 19 and 20, 2025, I had the opportunity to participate in "Explore les métiers" (Explore Careers), a regional forum organized by the Bourgogne-Franche-Comté region at the Dijon Exhibition Park. This event was open to the public: middle school students, high school students, university students, apprentices, job seekers, parents, and everyone curious about careers.
 
-      The fair provided a platform for networking, learning about various career paths, and exploring job opportunities in the Dijon area and all surrounding regions. It featured booths from a wide range of industries, including technology, healthcare, finance, and more.
+      "Explore les métiers" offers a unique experience by transporting visitors into the professional worlds that surround everyday life. The forum featured approximately 60 professions grouped into thematic sectors: Food, Automotive and Engines, Building and Civil Works, Agriculture, Industry, Services, Communication and Digital, Healthcare, Armed Forces, and Agriculture. More than 400 young competitors showcased these different professions, providing a playful and active learning experience.
 
-      Here is a picture of our Cybersecurity teacher who was in charge of the booth representing our Networks & Telecoms department at the university of Marie & Louis Pasteur.
+      Visitors could learn professional skills, exchange with passionate experts, learn about educational programs, and take on practical challenges.
+
+      Here is a picture of our Cybersecurity teacher who was in charge of the booth representing our Networks & Telecoms department Cybersecurity program at the university of Marie & Louis Pasteur.
 
     image: "/img/portfolio/finalboss_cyberbooth.jpeg"
     
