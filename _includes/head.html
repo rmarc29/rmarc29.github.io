@@ -6,7 +6,7 @@
   <meta name="author" content="Romain MARC">
 
   {% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
-  <title>{% if page.title %}{{ page.title }}{% else %}Portfolio - {{ t.brand | split: ' - ' | first }}{% endif %}</title>
+  <title>{% if page.tab_title %}{{ page.tab_title }}{% elsif page.title %}{{ page.title }}{% else %}Portfolio - {{ t.brand | split: ' - ' | first }}{% endif %}</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}" type="text/css">
