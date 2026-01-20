@@ -29,18 +29,4 @@ sections:
         
     image1: "/img/portfolio/cyberbooth.jpeg"
     
-  - title: "Programme National Français Réseaux & Télécommunications"
-    text: |
-      Cet événement est directement lié au PN R&T français.
-      
-      Résultats d'Apprentissage Critiques 35.01 : Surveiller l'activité du système d'information.
-
-      À travers ce résultat d'apprentissage, j'ai acquis une expérience pratique en:
-
-      - Comprendre les besoins de l'industrie
-
-      - Établir des contacts avec les professionnels
-
-      - Explorer les opportunités de carrière dans divers secteurs
-    image: "/img/portfolio/AC35.01_SurveillerActiviteSI.png"
 ---
