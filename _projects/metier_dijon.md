@@ -13,7 +13,7 @@ sections:
 
       Visitors could learn professional skills, exchange with passionate experts, learn about educational programs, and take on practical challenges.
 
-      Here is a picture of our Cybersecurity teacher who was in charge of the booth representing our Networks & Telecoms department Cybersecurity program at the university of Marie & Louis Pasteur.
+      Here is a picture of our <span class="cybersecurity-word">Cybersecurity</span> teacher who was in charge of the booth representing our Networks & Telecoms department <span class="cybersecurity-word">Cybersecurity</span> program at the university of Marie & Louis Pasteur.
 
     image: "/img/portfolio/finalboss_cyberbooth.jpeg"
     

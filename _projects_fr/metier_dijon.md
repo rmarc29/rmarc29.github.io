@@ -13,7 +13,7 @@ sections:
 
       Les visiteurs pouvaient s'initier aux gestes professionnels, échanger avec des experts passionnés, s'informer sur les cursus de formation, et relever des challenges pratiques.
 
-      Voici une photo de notre professeur de Cybersécurité qui était responsable du stand représentant notre département Réseaux & Télécommunications parcours Cybersécurité à l'université de Marie & Louis Pasteur.
+      Voici une photo de notre professeur de <span class="cybersecurity-word">Cybersécurité</span> qui était responsable du stand représentant notre département Réseaux & Télécommunications parcours <span class="cybersecurity-word">Cybersécurité</span> à l'université de Marie & Louis Pasteur.
 
     image: "/img/portfolio/finalboss_cyberbooth.jpeg"
     
