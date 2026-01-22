@@ -21,7 +21,7 @@ sections:
   
        The database has it's own user, that is used only for this sole purpose, and has limited permissions to avoid any potential <font color="lightblue">security</font> risks.
        
-       The server's database is secured by hashing user details such as <font color="cornflowerblue">passwords</font>, session key and <font color="orange">salt</font> using the SRP6 algorithm. This ensures that even if the database is compromised, the actual <font color="cornflowerblue">passwords</font> remain protected. (More details in paragraphs below)
+       The server's database is secured by hashing user details such as <font color="cornflowerblue">passwords</font>, session key and <font color="orange">salt</font> using the <font color="orange">SRP6</font> algorithm. This ensures that even if the database is compromised, the actual <font color="cornflowerblue">passwords</font> remain protected. (More details in paragraphs below)
        
        <br>
        <br>
@@ -85,6 +85,12 @@ sections:
       This project directly demonstrates knowledge in several critical learning outcomes such as:
       
       - AC34.01 Cyber - Implementing Advanced Network Infrastructure Security Tools
+
+      - CE3.05 - By integrating security issues
+
+      - CE4.01 - By aiming for a fair compromise between security requirements and usability constraints
+
+      - CE4.02 - By "respecting" standards and the legal framework
         
         Through the deployment of <font color="yellow">RTRealm</font>, I configured <font color="lightblue">secure</font> authentication mechanisms and implemented layered <font color="lightblue">security</font> protocols to protect the game server infrastructure from unauthorized access.
       
@@ -97,6 +103,8 @@ sections:
         Account management and transaction logging were integrated to monitor user registrations, login attempts, and authentication failures, providing audit trails for <font color="lightblue">security</font> monitoring and incident response.
       
       - AC32.04 - Enabling Secure Employee/User Connection to Enterprise Information Systems
+
+      - CE1.02 - By respecting fundamental principles of computer security
         
         The <font color="orange">SRP6</font> authentication protocol ensures that users can <font color="lightblue">securely</font> connect to the server without exposing their <font color="cornflowerblue">passwords</font> over the network, implementing best practices for <font color="lightblue">secure</font> remote authentication in networked environments.
       

@@ -21,7 +21,7 @@ sections:
   
        La base de données possède son propre utilisateur, qui est utilisé uniquement pour cette seule finalité, et dispose de permissions limitées pour éviter tout risque de <font color="lightblue">sécurité</font> potentiel.
        
-       La base de données du serveur est <font color="lightblue">sécurisée</font> par le hachage des détails utilisateur tels que les <font color="cornflowerblue">mots de passe</font>, les clés de session et le <font color="orange">sel</font> en utilisant l'algorithme SRP6. Cela garantit que même si la base de données est compromise, les <font color="cornflowerblue">mots de passe</font> réels restent protégés. (Plus de détails dans les paragraphes ci-dessous)
+       La base de données du serveur est <font color="lightblue">sécurisée</font> par le hachage des détails utilisateur tels que les <font color="cornflowerblue">mots de passe</font>, les clés de session et le <font color="orange">sel</font> en utilisant l'algorithme <font color="orange">SRP6</font>. Cela garantit que même si la base de données est compromise, les <font color="cornflowerblue">mots de passe</font> réels restent protégés. (Plus de détails dans les paragraphes ci-dessous)
        
        <br>
        <br>
@@ -84,9 +84,11 @@ sections:
       
       - AC34.01 Cyber - Mettre en œuvre des outils avancés de sécurisation d'une infrastructure du réseau
 
+      - CE3.05 - En intégrant les problématiques de sécurité
+
       - CE4.01 - En visant un juste compromis entre exigences de sécurité et contraintes d'utilisation
 
-      - CE4.02 - "En respectant les normes et le cadre juridique"
+      - CE4.02 - En "respectant" les normes et le cadre juridique
         
         Grâce au déploiement de <font color="yellow">RTRealm</font>, j'ai configuré des mécanismes d'authentification <font color="lightblue">sécurisés</font> et mis en œuvre des protocoles de <font color="lightblue">sécurité</font> en couches pour protéger l'infrastructure du serveur de jeu contre les accès non autorisés.
       
@@ -100,6 +102,8 @@ sections:
       
       - AC32.04 - Permettre aux collaborateurs de se connecter de manière sécurisée au système d'information de l'entreprise
         
+      - CE1.02 - En respectant les principes fondamentaux de la sécurité informatique
+
         Le protocole d'authentification <font color="orange">SRP6</font> garantit que les utilisateurs peuvent se connecter en toute <font color="lightblue">sécurité</font> au serveur sans exposer leurs <font color="cornflowerblue">mots de passe</font> sur le réseau, mettant en œuvre les meilleures pratiques d'authentification à distance <font color="lightblue">sécurisée</font> dans des environnements réseau.
       
       Ces implémentations démontrent l'application pratique de la <font color="lightblue">sécurité</font> réseau, de l'administration système et des principes de <font color="lightblue">sécurité</font> de base de données essentiels au programme N&T.
