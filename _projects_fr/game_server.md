@@ -80,15 +80,19 @@ sections:
     
   - title: "Programme National Réseaux & Télécoms"
     text: |
-      Ce projet démontre directement des connaissances dans plusieurs apprentissages critiques tels que :
+      Ce projet démontre directement des connaissances dans plusieurs apprentissages critiques ainsi que composantes essentielles tels que :
       
       - AC34.01 Cyber - Mettre en œuvre des outils avancés de sécurisation d'une infrastructure du réseau
+
+      - CE4.01 - En visant un juste compromis entre exigences de sécurité et contraintes d'utilisation
+
+      - CE4.02 - "En respectant les normes et le cadre juridique"
         
-        Grâce au déploiement de <font color="red">RTRealm</font>, j'ai configuré des mécanismes d'authentification <font color="lightblue">sécurisés</font> et mis en œuvre des protocoles de <font color="lightblue">sécurité</font> en couches pour protéger l'infrastructure du serveur de jeu contre les accès non autorisés.
+        Grâce au déploiement de <font color="yellow">RTRealm</font>, j'ai configuré des mécanismes d'authentification <font color="lightblue">sécurisés</font> et mis en œuvre des protocoles de <font color="lightblue">sécurité</font> en couches pour protéger l'infrastructure du serveur de jeu contre les accès non autorisés.
       
       - AC34.04 Cyber - Proposer une architecture sécurisée de système d'information pour une petite structure
         
-        J'ai conçu et mis en œuvre une architecture <font color="lightblue">sécurisée</font> complète pour le serveur <font color="red">RTRealm</font>, incluant une séparation appropriée des préoccupations entre le serveur de jeu, la couche de base de données et le système d'inscription orienté utilisateur, garantissant l'intégrité et la confidentialité des données.
+        J'ai conçu et mis en œuvre une architecture <font color="lightblue">sécurisée</font> complète pour le serveur <font color="yellow">RTRealm</font>, incluant une séparation appropriée des préoccupations entre le serveur de jeu, la couche de base de données et le système d'inscription orienté utilisateur, garantissant l'intégrité et la confidentialité des données.
       
       - AC36.01 Cyber - Surveiller l'activité du système d'information
         

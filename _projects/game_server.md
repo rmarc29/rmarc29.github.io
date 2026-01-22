@@ -86,11 +86,11 @@ sections:
       
       - AC34.01 Cyber - Implementing Advanced Network Infrastructure Security Tools
         
-        Through the deployment of <font color="red">RTRealm</font>, I configured <font color="lightblue">secure</font> authentication mechanisms and implemented layered <font color="lightblue">security</font> protocols to protect the game server infrastructure from unauthorized access.
+        Through the deployment of <font color="yellow">RTRealm</font>, I configured <font color="lightblue">secure</font> authentication mechanisms and implemented layered <font color="lightblue">security</font> protocols to protect the game server infrastructure from unauthorized access.
       
       - AC34.04 Cyber - Proposing Secure Information System Architecture for Small Structures
         
-        I designed and implemented a complete <font color="lightblue">secure</font> architecture for the <font color="red">RTRealm</font> server, including proper separation of concerns between the game server, database layer, and user-facing registration system, ensuring data integrity and confidentiality.
+        I designed and implemented a complete <font color="lightblue">secure</font> architecture for the <font color="yellow">RTRealm</font> server, including proper separation of concerns between the game server, database layer, and user-facing registration system, ensuring data integrity and confidentiality.
       
       - AC36.01 Cyber - Monitoring System Activity
         
